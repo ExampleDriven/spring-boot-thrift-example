@@ -10,10 +10,10 @@ This example demonstrates the following
 
 # Important urls
 
-Client URL : http://localhost:8083/test_thrift 
-Client URL (for load testing) : http://localhost:8083/test_thrift?compact=true
-Thrift server endpoint : http://localhost:8082/book
-Thrift swift server endpoint : http://localhost:8084/book
+- Client URL : http://localhost:8083/test_thrift 
+- Client URL (for load testing) : http://localhost:8083/test_thrift?compact=true
+- Thrift server endpoint : http://localhost:8082/book
+- Thrift swift server endpoint : http://localhost:8084/book
 
 # How to run the examples
 1. Start up the desired backend implementation

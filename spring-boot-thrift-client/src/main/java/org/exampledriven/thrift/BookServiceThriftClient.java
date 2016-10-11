@@ -11,9 +11,9 @@ import org.springframework.stereotype.Component;
 public class BookServiceThriftClient extends BookService.Client {
 
     public BookServiceThriftClient(TProtocolFactory tProtocolFactory,
-       @Value("${thrift.server.host:localhost}")
+       @Value("${book.server.host}")
        String host,
-       @Value("${thrift.server.port:8084}")
+       @Value("${book.server.port}")
        int port) throws TTransportException
     {
         super(tProtocolFactory.getProtocol(new THttpClient("http://" + host + ":" + port + "/book")));

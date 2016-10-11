@@ -15,11 +15,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.Arrays;
 import java.util.List;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+//@RunWith(SpringRunner.class)
+//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootThriftExampleApplication.class)
 public class SpringBootThriftExampleApplicationTests {
-
-   /* @Autowired
+/*
+    @Autowired
     protected TProtocolFactory protocolFactory;
 
     @Value("${local.server.port}")
@@ -43,5 +43,6 @@ public class SpringBootThriftExampleApplicationTests {
         List<Book> request = Arrays.asList(book, book);
 
         bookClient.createBooks(request);
-    }*/
+    }
+    */
 }

@@ -1,21 +1,27 @@
 package org.exampledriven;
 
-import com.facebook.swift.service.ThriftMethod;
-import com.facebook.swift.service.ThriftService;
-import org.apache.thrift.TException;
-import org.exampledriven.domain.Book;
 import org.springframework.stereotype.Service;
-
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@ThriftService
-public class BookServiceHandler {
+public class BookServiceHandler implements BookService {
 
-    @ThriftMethod
-    public List<Book> createBooks(List<Book> books) throws TException {
-        books.forEach(book -> book.setISBN(BookUtil.generateISBN()));
-        return books;
+    @Override
+    public List<Book> createBooks(List<Book> books) {
+
+        List<Book> result = new ArrayList<>(books.size());
+
+        books.forEach(book -> {
+                Book bookWithISBN = new Book.Builder(book)
+                    .setIsbn(BookUtil.generateISBN())
+                    .build();
+                result.add(bookWithISBN);
+            }
+
+        );
+
+        return result;
     }
 
 }

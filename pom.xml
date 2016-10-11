@@ -11,8 +11,8 @@
     <name>Spring boot thrift example aggregator</name>
 
     <modules>
-        <module>spring-boot-thrift-server</module>
         <module>spring-boot-thrift-client</module>
+        <module>spring-boot-thrift-server</module>
         <module>spring-boot-thrift-swift-server</module>
     </modules>
 

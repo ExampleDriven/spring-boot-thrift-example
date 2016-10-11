@@ -1,2 +1,10 @@
 server:
   port: 8083
+
+book:
+  server:
+    host: localhost
+    #thrift server
+    port: 8082
+    #thrift swift server
+#    port: 8084

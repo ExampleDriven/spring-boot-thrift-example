@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SpringBootThriftExampleApplication.class)
 public class SpringBootThriftExampleApplicationTests {
 
     @Autowired

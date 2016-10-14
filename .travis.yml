@@ -6,6 +6,6 @@ before_install:
   - cd thrift-0.9.3
   - ./configure
   - make
-  - make install
+  - sudo make install
 language: java
 jdk: oraclejdk8
